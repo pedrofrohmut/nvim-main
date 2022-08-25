@@ -9,13 +9,16 @@ map("n", "<F1>", ":vertical help ", { noremap = true })
 -- File Explorer
 map("n", "<leader>fe", ":Ex<CR>", options)
 
+-- Clean Command Message
+map("n", "<C-c>", "<cmd>echo ''<Enter>", options);
+
 -- Closer del
 map("i", "<C-l>", "<Del>", options)
 
 -- Insert lines in Normal Mode
 map("n", "<CR>", "i<CR><Esc>", options)
-map("n", "<leader>j", "o<Esc>k", options)
-map("n", "<leader>k", "O<Esc>j", options)
+map("n", "<A-n>", "o<Esc>k", options)
+map("n", "<A-p>", "O<Esc>j", options)
 
 -- Scrolling (Needed on Windows/WSL)
 map("n", "<A-j>", "3<C-e>", options)
@@ -109,6 +112,15 @@ map("n", "<Right>", ":vertical resize +5<CR>", options)
 map("n", "<leader>ws", "<C-w>s", options)
 map("n", "<leader>wv", "<C-w>v", options)
 
+-- Change current window to a new tab
+map("n", "<leader>wt", "<C-w>T", options)
+
 -- Change/Rotate Focus
 map("n", "<C-j>", "<C-w>w", options) -- Next
 map("n", "<C-k>", "<C-w>W", options) -- Prev
+
+-- Closes every other window and every other tab
+map("n", "<leader>wo", [[ 
+          <cmd>echo ''<Enter> 
+          <cmd>tabonly<Enter>
+          <cmd>only<Enter> ]], { noremap = true })
