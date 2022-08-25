@@ -74,8 +74,10 @@ return require('packer').startup(function(use)
     use 'airblade/vim-gitgutter'
 
     -- Status Line
-    --use 'nvim-lualine/lualine.nvim'
-    use 'itchyny/lightline.vim'
+    use 'nvim-lualine/lualine.nvim'
+
+    -- Snippets
+    use 'rafamadriz/friendly-snippets'
 
     -- Color Schemes
     use 'mhartington/oceanic-next'

@@ -145,12 +145,13 @@ vim.keymap.set("n", "<leader>lo", ":<C-u>CocList outline<Enter>", { noremap = tr
 -- Extensions List #############################################################
 
 vim.g.coc_global_extensions = { 
-    "coc-html", 
     "coc-css", 
     "coc-eslint",
-    "coc-tsserver",
+    "coc-html", 
     "coc-prettier",   
     "coc-pyright",
-    "coc-vetur",
+    "coc-snippets",
     "coc-tailwindcss",
+    "coc-tsserver",
+    "coc-vetur",
 }
